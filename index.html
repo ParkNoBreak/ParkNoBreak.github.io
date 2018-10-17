@@ -227,7 +227,7 @@ height: 200px;
         setTimeout(function () {
             $.get("https://api.coinmarketcap.com/v2/ticker/2561/", function (data) {
                 // var p = JSON.parse(data);
-                // tubePrice = p.data.quotes.USD.price
+                tubePrice = data
                 console.log(data)
             });
         }, 1000);
