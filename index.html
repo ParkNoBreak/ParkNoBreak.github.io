@@ -231,6 +231,7 @@ height: 200px;
         
         $("#reward").change(function (e) { 
             drawResult(parseInt($("#reward").val()), tubePrice, costs)
+            $("#reward").val(e)
         });
 
 
