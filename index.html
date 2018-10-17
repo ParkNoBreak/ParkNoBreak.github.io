@@ -224,7 +224,7 @@ height: 200px;
         var rwd = $("#reward").val;
         setInterval(function () {
             $.get("https://api.coinmarketcap.com/v2/ticker/2561/", function (data) {
-                tubePrice = data
+                tubePrice = data.quotes.USD.price
                 drawResult(rwd, tubePrice, costs)
             });
         }, 5000);
