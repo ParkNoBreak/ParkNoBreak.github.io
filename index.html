@@ -213,6 +213,7 @@ height: 200px;
 <script>
     var tubePrice = 0.065;
     var costs = 0.0075 * 24;
+    var rwd = $("#reward").val;
 
     function drawResult(reward, price, cost) { 
         var res = reward * price;
@@ -221,7 +222,6 @@ height: 200px;
     }
 
     $(document).ready(function () {
-        var rwd = $("#reward").val;
         setInterval(function () {
             $.get("https://api.coinmarketcap.com/v2/ticker/2561/", function (data) {
                 tubePrice = data.data.quotes.USD.price
