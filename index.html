@@ -188,9 +188,14 @@ height: 200px;
             </div>
             <div class="outter"><img src="/logo.png" class="image-circle" /></div>
         </div>
-        <div class="col-md-12 col-xs-12 follow line" align="center">
+        <div class="col-md-6 col-xs-6 follow line" align="center">
             <h3>
                 125651 <br /> <span>FOLLOWERS</span>
+            </h3>
+        </div>
+        <div class="col-md-6 col-xs-6 follow line" align="center">
+            <h3>
+                With $0.007/hr VPS Plan
             </h3>
         </div>
 
@@ -215,3 +220,17 @@ height: 200px;
 
     </div>
 </div>
+
+<script>
+    var tubePrice = 0;
+    $(document).ready(function () {
+        setTimeout(function () {
+            $.get("https://api.coinmarketcap.com/v2/ticker/2561/", function (data) {
+                var p = JSON.parse(data);
+                tubePrice = p.data.quotes.USD.price
+                console.log(tubePrice)
+            });
+        }, 60000);
+
+    });
+</script>
