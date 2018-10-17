@@ -229,9 +229,9 @@ height: 200px;
             });
         }, 5000);
         
-        $("#reward").change(function (e) { 
+        $("#reward").change(function () { 
             drawResult(parseInt($("#reward").val()), tubePrice, costs)
-            $("#reward").val(e)
+            $("#reward").val($(this).val())
         });
 
 
