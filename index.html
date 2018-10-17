@@ -191,7 +191,6 @@ height: 200px;
         <div class="col-md-12 col-xs-12 follow line" align="center">
             <h3>Assume we use DigitalOcean $5 Droplet</h3>
         </div>
-        </div>
         <div class="col-md-12 col-xs-12 follow line" align="center">
             <h3 class="result">
                
@@ -225,7 +224,7 @@ height: 200px;
         var rwd = $("#reward").val;
         setInterval(function () {
             $.get("https://api.coinmarketcap.com/v2/ticker/2561/", function (data) {
-                tubePrice = data.quotes.USD.price
+                tubePrice = data
                 drawResult(rwd, tubePrice, costs)
             });
         }, 5000);
