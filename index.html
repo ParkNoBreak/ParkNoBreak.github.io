@@ -213,7 +213,7 @@ height: 200px;
 <script>
     var tubePrice = 0.065;
     var costs = 0.0075 * 24;
-    var rwd = $("#reward").val;
+    var rwd = parseInt($("#reward").val());
 
     function drawResult(reward, price, cost) { 
         var res = reward * price;
@@ -230,7 +230,7 @@ height: 200px;
         }, 5000);
         
         $("#reward").change(function (e) { 
-            drawResult(e.val, tubePrice, costs)    
+            drawResult(parseInt(e.val()), tubePrice, costs)
         });
 
 
