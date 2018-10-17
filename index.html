@@ -213,7 +213,7 @@ height: 200px;
 <script>
     var tubePrice = 0.065;
     var costs = 0.0075 * 24;
-    var rwd = parseInt($("#reward").val());
+    var rwd = parseFloat($("#reward").val());
 
     function drawResult(reward, price, cost) { 
         var res = reward * price;
@@ -230,8 +230,8 @@ height: 200px;
         }, 5000);
         
         $("#reward").keyup(function () {
-            drawResult(parseInt($("#reward").val()), tubePrice, costs)
-            rwd = parseInt($("#reward").val());
+            drawResult(parseFloat($("#reward").val()), tubePrice, costs)
+            rwd = parseFloat($("#reward").val());
         });
 
 
