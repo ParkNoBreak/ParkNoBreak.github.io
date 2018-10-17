@@ -229,7 +229,7 @@ height: 200px;
             });
         }, 5000);
         
-        $("#reward").change(function () { 
+        $("#reward").keyup(function () {
             drawResult(parseInt($("#reward").val()), tubePrice, costs)
             rwd = parseInt($("#reward").val());
         });
